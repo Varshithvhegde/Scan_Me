@@ -17,6 +17,7 @@ import com.varshith.varshith.qr_generator.R;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
+
 public class ScanActivity extends AppCompatActivity {
 
     Button scanButton, copyButton;
