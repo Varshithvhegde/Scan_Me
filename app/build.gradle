@@ -6,11 +6,11 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.example.android.qr_generator"
+        applicationId "com.varshith.varshith.qr_generator"
         minSdk 24
         targetSdk 31
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "2.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -38,4 +38,5 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
+    implementation 'com.airbnb.android:lottie:3.4.0'
 }

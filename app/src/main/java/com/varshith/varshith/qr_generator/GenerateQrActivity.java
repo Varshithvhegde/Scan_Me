@@ -1,4 +1,4 @@
-package com.example.android.qr_generator;
+package com.varshith.varshith.qr_generator;
 
 import android.Manifest;
 import android.content.Context;
@@ -22,6 +22,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.varshith.varshith.qr_generator.R;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
@@ -78,7 +79,7 @@ public class GenerateQrActivity extends AppCompatActivity {
             }
         });
 
-
+//444
         saveImage_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -109,7 +110,7 @@ public class GenerateQrActivity extends AppCompatActivity {
                 }
             }
         });
-
+        //44444
     }
 
 
@@ -162,7 +163,11 @@ public class GenerateQrActivity extends AppCompatActivity {
         }
 
         Intent intent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+
         intent.setData(Uri.fromFile(outFile));
+//        String shareMessage = "Let me recommend you this application\n A QR Code Scanner\n\n";
+//        shareMessage = shareMessage + "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID + "\n\n";
+//        intent.putExtra(Intent.EXTRA_TEXT, shareMessage);
         sendBroadcast(intent);
     }
 

@@ -1,4 +1,4 @@
-package com.example.android.qr_generator;
+package com.varshith.android.qr_generator;
 
 import org.junit.Test;
 

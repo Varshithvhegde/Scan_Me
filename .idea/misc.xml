@@ -4,6 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/varsh.LAPTOP-IG9S62OJ/AndroidStudioProjects/QRScanner/app/src/main/res/layout/activity_generate_qr.xml" value="0.25833333333333336" />
+        <entry key="..\:/Users/varsh.LAPTOP-IG9S62OJ/AndroidStudioProjects/QRScanner/app/src/main/res/layout/activity_info.xml" value="0.18177083333333333" />
+        <entry key="..\:/Users/varsh.LAPTOP-IG9S62OJ/AndroidStudioProjects/QRScanner/app/src/main/res/layout/activity_main.xml" value="0.25833333333333336" />
+        <entry key="..\:/Users/varsh.LAPTOP-IG9S62OJ/AndroidStudioProjects/QRScanner/app/src/main/res/layout/activity_scan.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/varsh.LAPTOP-IG9S62OJ/AndroidStudioProjects/QRScanner/app/src/main/res/layout/activity_splash.xml" value="0.25833333333333336" />
       </map>
     </option>
   </component>

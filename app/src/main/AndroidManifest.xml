@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android.qr_generator">
+    package="com.varshith.varshith.qr_generator">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -14,9 +14,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QR_Generator">
-        <activity android:name=".ScanActivity"></activity>
-        <activity android:name=".GenerateQrActivity" />
-        <activity android:name=".MainActivity"
+        <activity
+            android:name="com.varshith.varshith.qr_generator.Info"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name="com.varshith.varshith.qr_generator.MainActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name="com.varshith.varshith.qr_generator.ScanActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.varshith.varshith.qr_generator.GenerateQrActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.varshith.varshith.qr_generator.Splash"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,10 +36,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Capture"
+        <activity
+            android:name="com.varshith.varshith.qr_generator.Capture"
             android:screenOrientation="portrait"
             android:stateNotNeeded="true"
-            android:theme="@style/zxing_CaptureTheme"/>
+            android:theme="@style/zxing_CaptureTheme" />
     </application>
 
 </manifest>

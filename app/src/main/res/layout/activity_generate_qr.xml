@@ -7,7 +7,7 @@
     android:background="#483D8B"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".MainActivity">
+    tools:context="com.example.varshith.qr_generator.com.varshith.varshith.qr_generator.MainActivity">
 
     <TextView
         android:id="@+id/top_tv"
@@ -86,7 +86,7 @@
         android:layout_marginTop="100dp"
         android:backgroundTint="#3CB371"
         android:fontFamily="sans-serif-medium"
-        android:text="Share"
+        android:text="Share QR Code"
         android:textAllCaps="false" />
 
 </RelativeLayout>
