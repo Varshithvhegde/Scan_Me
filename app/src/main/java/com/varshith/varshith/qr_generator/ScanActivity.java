@@ -92,7 +92,7 @@ public class ScanActivity extends AppCompatActivity {
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(urlcheck));
                 startActivity(i);
-               
+                scanned_textview.setText(intentResult.getContents());
             }
             else {
                 scanned_textview.setText(intentResult.getContents());
