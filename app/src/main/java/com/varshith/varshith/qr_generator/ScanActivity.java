@@ -7,8 +7,12 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
+import android.webkit.URLUtil;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,6 +20,9 @@ import android.widget.Toast;
 import com.varshith.varshith.qr_generator.R;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
+
+import java.net.URL;
+import java.util.regex.Pattern;
 
 
 public class ScanActivity extends AppCompatActivity {
@@ -79,9 +86,37 @@ public class ScanActivity extends AppCompatActivity {
         IntentResult intentResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
 
         if(intentResult.getContents() != null) {
-            scanned_textview.setText(intentResult.getContents());
+            String urlcheck=intentResult.getContents();
+            boolean is=checkURL(urlcheck);
+            if(is){
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(urlcheck));
+                startActivity(i);
+               
+            }
+            else {
+                scanned_textview.setText(intentResult.getContents());
+            }
         } else {
             Toast.makeText(this, "OOPS....You didn't scan anything", Toast.LENGTH_SHORT).show();
         }
+    }
+    public static boolean checkURL(CharSequence input) {
+        if (TextUtils.isEmpty(input)) {
+            return false;
+        }
+        Pattern URL_PATTERN = Patterns.WEB_URL;
+        boolean isURL = URL_PATTERN.matcher(input).matches();
+        if (!isURL) {
+            String urlString = input + "";
+            if (URLUtil.isNetworkUrl(urlString)) {
+                try {
+                    new URL(urlString);
+                    isURL = true;
+                } catch (Exception e) {
+                }
+            }
+        }
+        return isURL;
     }
 }

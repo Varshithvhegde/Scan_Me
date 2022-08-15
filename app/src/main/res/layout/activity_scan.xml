@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#483D8B"
     android:padding="20dp"
-    tools:context="com.example.varshith.qr_generator.com.varshith.varshith.qr_generator.ScanActivity">
+    tools:context="com.varshith.varshith.qr_generator.ScanActivity">
 
     <TextView
         android:id="@+id/top_tv"
